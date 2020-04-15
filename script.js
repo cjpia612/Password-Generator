@@ -14,9 +14,12 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-function myFunction(){
-    var generate = alert("Choose from the following password criteria.");
+function clickButton(){
+    var generate = prompt( "Choose length of password between 8-128 characters.");
 }
+// if{
+//     prompt= ("Choose length of password between 8-128 characters.");
+// }
 // if (generateBtn.addEventListener) {
 //     alert ("Choose from the following password criteria.");
 // }
