@@ -12,3 +12,11 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+function myFunction(){
+    var generate = alert("Choose from the following password criteria.");
+}
+// if (generateBtn.addEventListener) {
+//     alert ("Choose from the following password criteria.");
+// }
