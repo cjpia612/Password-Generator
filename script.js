@@ -23,11 +23,22 @@ function(){
  var pwLength = parseInt(prompt("Choose length of password between 8-128 characters."));
  if (pwLength < 8 || pwLength > 128) {
     alert("Invalid input. Please refresh page and start again");
- } 
+ }
+ else if (pwLength === 8 || pwLength > 8 || pwLength < 128 || pwLength === 128) {
+  var confirmUppers= confirm("Do you want Uppercase Letters to be included?");
+ }
+ if (confirmUppers === true || confirmUppers === false) {
+   var confirmLowers = confirm ("Do you want Lowercase Letters to be included?");
+ }
+ if (confirmLowers === true || confirmLowers === false) {
+   var confirmSpecial = confirm("Do you want special characters to be included? ");
+ }
+ if (confirmSpecial === true || confirmSpecial === false) {
+   var confirmNumbers = confirm ("Do you want numbers to be included?")
+ }
   });
 
-//else if (pwLength === 8 || pwLength > 8 || pwLength < 128 || pwLength === 128) {
-//
+;
 // }
 // }
 
