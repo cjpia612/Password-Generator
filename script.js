@@ -23,7 +23,9 @@ function(){
  var confirmLowers = confirm ("Do you want lowercase letters to be included?");
  var confirmSpecial = confirm("Do you want special characters to be included? ");
  var confirmNumbers = confirm ("Do you want numbers to be included?");
+
  //  Start combining the results into values
+ //Declare new empty array to contain all the pushed values
  var pwCriteria = [];
  if (confirmUppers){
    pwCriteria.push(uppers);
