@@ -25,10 +25,29 @@ function(){
     alert("Invalid input. Please refresh page and start again");
  } else if (pwLength === 8 || pwLength > 8 || pwLength < 128 || pwLength === 128) {
    confirm("Please choose criteria from the following pop-ups.");
+   console.log(pwLength);
  }
- var confirmLowers = confirm ("Do you want Lowercase Letters to be included?");
+ var confirmUppers = confirm ("Do you want uppercase letters to be included?")
+ var confirmLowers = confirm ("Do you want lowercase letters to be included?");
  var confirmSpecial = confirm("Do you want special characters to be included? ");
  var confirmNumbers = confirm ("Do you want numbers to be included?");
+ //  Start combining the results into values
+ var pwCriteria = [];
+ if (confirmUppers){
+   pwCriteria.push(uppers);
+ }
+ if(confirmLowers){
+   pwCriteria.push(lowers);
+ }
+ if(confirmSpecial){
+   pwCriteria.push(special);
+ }
+ if(confirmNumbers){
+   pwCriteria.push(numbers);
+ }
+ if(!confirmUppers,!confirmLowers,!confirmSpecial,!confirmNumbers){
+   alert("Inavlid. You must choose AT LEAST one criterion. Please refresh & start again.");
+ }
 });
  
 
