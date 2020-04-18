@@ -45,7 +45,6 @@ function(){
 
  for (var i = 0, n = joined.length; i < pwLength; i++) {
     pwFinal += joined.charAt(Math.floor(Math.random() * n));
-    console.log(pwFinal);
  }
 alert("To generate another new password, please refresh page!")
 });
