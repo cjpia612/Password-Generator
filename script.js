@@ -1,12 +1,12 @@
+
+var special = ["~","!","@","#","$","%","^","&","*","(",")","-","_","+","="];
+var uppers = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var lowers = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var numbers = ["0","1","2","3","4","5","6","7","8","9"];
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-// var criteriaPw = 
-//   "special": ["~","!","@","#","$","%","^","&","*","(",")","-","_","+","="]
-//   "uppers":["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
-//             "P","Q","R","S","T","U","V","W","X","Y","Z"]
-//   "lowers":["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
-//             "p","q","r","s","t","u","v","w","x","y","z"]
-//   "numbers":["0","1","2","3","4","5","6","7","8","9"]
+
   
 // Write password to the #password input
 function writePassword() {
@@ -23,22 +23,17 @@ function(){
  var pwLength = parseInt(prompt("Choose length of password between 8-128 characters."));
  if (pwLength < 8 || pwLength > 128) {
     alert("Invalid input. Please refresh page and start again");
+ } else if (pwLength === 8 || pwLength > 8 || pwLength < 128 || pwLength === 128) {
+   confirm("Please choose criteria from the following pop-ups.");
  }
- else if (pwLength === 8 || pwLength > 8 || pwLength < 128 || pwLength === 128) {
-  var confirmUppers= confirm("Do you want Uppercase Letters to be included?");
- }
- if (confirmUppers === true || confirmUppers === false) {
-   var confirmLowers = confirm ("Do you want Lowercase Letters to be included?");
- }
- if (confirmLowers === true || confirmLowers === false) {
-   var confirmSpecial = confirm("Do you want special characters to be included? ");
- }
- if (confirmSpecial === true || confirmSpecial === false) {
-   var confirmNumbers = confirm ("Do you want numbers to be included?")
- }
-  });
+ var confirmLowers = confirm ("Do you want Lowercase Letters to be included?");
+ var confirmSpecial = confirm("Do you want special characters to be included? ");
+ var confirmNumbers = confirm ("Do you want numbers to be included?");
+});
+ 
 
-;
+
+// ;
 // }
 // }
 
