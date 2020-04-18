@@ -25,7 +25,7 @@ function(){
  var confirmNumbers = confirm ("Do you want numbers to be included?");
 
  //  Start combining the results into values
- //Declare new empty array to contain all the pushed values
+ // Declare new empty array to contain all the pushed values
  var pwCriteria = [];
  if (confirmUppers){
    pwCriteria.push(uppers);
@@ -43,27 +43,14 @@ function(){
    alert("Invalid. You must choose AT LEAST one criterion. Please refresh & start again.");
  }
  
+ // Declare new variable to join all the values in array into one string
  var joined = pwCriteria.join("");
 
+ // For loop will execute to generate the randomized password. 
  for (var i = 0, n = joined.length; i < pwLength; i++) {
     pwFinal += joined.charAt(Math.floor(Math.random() * n));
  }
+ alert(`Here is your unique password! ${pwFinal}`);
 alert("To generate another new password, please refresh page!")
 });
  
-
-
-// ;
-// }
-// }
-
-
-// var charAmount = []
-// if (generate) {
-//     prompt( "Do you want lower case letters?")
-// }
-// // Loop 10 times
-// for (var i = 0; i < 10; i++) {
-//     // Generate a random number between 1 and 10
-//     // Math.floor will round down, meaning we would get a number between 0 and 9, so we'll always add 1 to bump it up.
-//     var num = Math.floor(Math.random() * 10) + 1;
