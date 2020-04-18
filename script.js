@@ -1,31 +1,20 @@
 
-var special = ["~","!","@","#","$","%","^","&","*","(",")","-","_","+","="];
-var uppers = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-var lowers = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-var numbers = ["0","1","2","3","4","5","6","7","8","9"];
+var special = ["~!,@#$%^&*()-_+="];
+var uppers = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var lowers = ["abcdefghijklmnopqrstuvwxyz"];
+var numbers = ["0123456789"];
+var pwFinal = "";  
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
-  
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
- 
-// Add event listener to generate button
 generateBtn.addEventListener("click", 
 function(){
- var pwLength = parseInt(prompt("Choose length of password between 8-128 characters."));
+ var pwLength = prompt("Choose length of password between 8-128 characters.");
  if (pwLength < 8 || pwLength > 128) {
     alert("Invalid input. Please refresh page and start again");
- } else if (pwLength === 8 || pwLength > 8 || pwLength < 128 || pwLength === 128) {
+ } else {
    confirm("Please choose criteria from the following pop-ups.");
-   console.log(pwLength);
+  
  }
  var confirmUppers = confirm ("Do you want uppercase letters to be included?")
  var confirmLowers = confirm ("Do you want lowercase letters to be included?");
@@ -48,6 +37,15 @@ function(){
  if(!confirmUppers,!confirmLowers,!confirmSpecial,!confirmNumbers){
    alert("Inavlid. You must choose AT LEAST one criterion. Please refresh & start again.");
  }
+ 
+ var joined = pwCriteria.join("");
+ 
+
+ for (var i = 0, n = joined.length; i < pwLength; i++) {
+    pwFinal += joined.charAt(Math.floor(Math.random() * n));
+    console.log(pwFinal);  
+ }
+
 });
  
 
