@@ -14,7 +14,6 @@ function(){
     alert("Invalid input. Please refresh page and start again");
  } else {
    confirm("Please choose criteria from the following pop-ups.");
-  
  }
  var confirmUppers = confirm ("Do you want uppercase letters to be included?")
  var confirmLowers = confirm ("Do you want lowercase letters to be included?");
@@ -39,11 +38,10 @@ function(){
  }
  
  var joined = pwCriteria.join("");
- 
 
  for (var i = 0, n = joined.length; i < pwLength; i++) {
     pwFinal += joined.charAt(Math.floor(Math.random() * n));
-    console.log(pwFinal);  
+    console.log(pwFinal);
  }
 
 });
