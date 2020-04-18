@@ -50,6 +50,7 @@ function(){
  for (var i = 0, n = joined.length; i < pwLength; i++) {
     pwFinal += joined.charAt(Math.floor(Math.random() * n));
  }
+ // Alert will display the generated password fitting all the criteria selected. 
  alert(`Here is your unique password! ${pwFinal}`);
 alert("To generate another new password, please refresh page!")
 });
